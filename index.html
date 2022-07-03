@@ -18,7 +18,7 @@
         .hiddenDiv {
         position:relative;
         z-index:4;
-        min-height:80px;
+        min-height:120px;
         top:-400px;
         }
 
@@ -50,7 +50,7 @@
         }
         .smallHeading{
             font-family: 'Birthstone Bounce';
-            font-size: 2.5vw;
+            font-size: 3.5vw;
             margin:0;
             
         }
@@ -79,12 +79,20 @@
         }
         h2{
             font-family:'EB Garamond', serif;
-            font-size: 2.5vw;
+            font-size: 3.5vw;
             text-align:left;
             margin-left: 10%;
+            margin-bottom:1%;
         }
         h3{
             font-family:'Birthstone Bounce'
+        }
+
+        h4{
+            font-family:'EB Garamond', serif;
+            font-size: 2vw;
+            text-align:center;
+
         }
         .bigText{
             position:relative;
@@ -100,11 +108,11 @@
             top: 50%;
             right: 0;
             left: 0;
-            width: 319px;
+            width: 50%;
             display: table;
             margin: 0 auto;
             font-family: 'EB Garamond', serif;
-            font-size: 24px;
+            font-size: 3vw;;
         }
 
         nav a {
@@ -202,13 +210,13 @@
             -webkit-animation-name: fadeInUp;
         }
 
-        #page-wrap { width: 80%; margin: 60px auto; }
+        #page-wrap { width: 80%; margin: 2% auto; }
 #page-wrap > div, #actual-table { margin: 0 0 0px 0; width: 96%; }
 
 #actual-table { border-collapse: collapse; }
     #actual-table td { 
       width: 20%; 
-      padding: 10px; 
+      padding: 2%; 
       vertical-align: top;
     }
     #actual-table td:nth-child(even) { 
@@ -221,7 +229,7 @@
   background-color: #eee;
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 3%;
   width: 100%;
   border: none;
   text-align: left;
@@ -235,7 +243,7 @@
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 0 2%;
   width: 80%;
   display: none;
   background-color: white;
@@ -275,16 +283,16 @@
                     <table id="actual-table">
                         <tr>
                             <td>
-                            <p><div class ="smallHeading">Time </div> <br> 7:00 pm </p>
+                            <p><div class ="smallHeading">Time </div> <br> <h4>7:00 pm </h4>  </p>
                             </td>
                             <td>
-                            <p>  <div class ="smallHeading">Date </div> <br>  3rd September 2022  </p>
+                            <p>  <div class ="smallHeading">Date </div> <br>  <h4>3rd September 2022  </h4> </p>
                             </td>
                             <td>
-                            <p><div class ="smallHeading">Location</div> <br> Sydney Aquarium, <br> 1-5 Wheat Rd, Sydney NSW 2000</p>
+                            <p><div class ="smallHeading">Location</div> <h4><br> Sydney Aquarium, <br> 1-5 Wheat Rd, Sydney NSW 2000</h4></p>
                             </td>
                             <td>
-                            <p><div class ="smallHeading">RSVP</div> <br> Kindly RSVP by the 31st of July <br></p>
+                            <p><div class ="smallHeading">RSVP</div> <br> <h4> Kindly RSVP by the 31st of July </h4><br></p>
                             </td>
                         </tr>
                     </table>
@@ -293,7 +301,7 @@
                 <div class="detailBlock" id="RSVP">
                     <h2> RSVP</h2>
 
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVB7iBz8Iv9PY2gJoH4iwfqZqXncqdAY-r6hB9i-D4YsoO4g/viewform?embedded=true" width="640" height="1273" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVB7iBz8Iv9PY2gJoH4iwfqZqXncqdAY-r6hB9i-D4YsoO4g/viewform?embedded=true" width="80%" height="1273" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
  
     
                 </div>
@@ -338,11 +346,13 @@
                     </div>
         
                 </div> 
-            </div>      
+                <marquee>This was Alan's contribution to the website.</marquee>
+       
+            </div>   
+           
         </div>
 
-    <marquee>This was Alan's contribution to the code.</marquee>
-    
+
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;

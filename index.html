@@ -253,6 +253,14 @@
 
 
     </style>
+    <script>
+    webView.setInitialScale(0);//default,no zoom
+    webView.getSettings().setSupportZoom(true);
+    webView.getSettings().setBuiltInZoomControls(true);
+    webView.getSettings().setLoadWithOverviewMode(false);
+    webView.getSettings().setUseWideViewPort(false);
+    webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+</script>
 </head>
 <body>
     <div class = "topBar">

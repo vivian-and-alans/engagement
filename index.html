@@ -1,0 +1,362 @@
+<!-- What are you doing here? 
+    Didn't your mother ever tell you it's rude to inspect other people's code.
+    Turn back now unless you want to read some ugly code. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivian and Alan's Engagement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Birthstone Bounce' rel='stylesheet'>
+
+    <style>
+        .hiddenDiv {
+        position:relative;
+        z-index:4;
+        min-height:80px;
+        top:-400px;
+        }
+
+        body {
+        background-image: url("resources/background-image.webp");
+        background-color: #cccccc;
+        margin-top:0;
+        margin-left:0;
+        margin-right: 0;
+        }
+        .topBar{
+            position:relative;
+            z-index: 1;
+            padding:0;
+            margin:0;
+        }
+        .topImage{
+            width: 100%;
+            height: 20%;
+            top: 0;
+            z-index: 2;
+            position: relative;
+        }
+        .cuteHeading{
+            font-family: 'Birthstone Bounce';
+            font-size: 3.5vw;
+            margin:0;
+            
+        }
+        .smallHeading{
+            font-family: 'Birthstone Bounce';
+            font-size: 2.5vw;
+            margin:0;
+            
+        }
+        .romanticPhoto{
+            width: 80%;
+            margin-left:auto;
+            margin-right:auto;
+            display:block;
+            padding: 10px;
+            
+        }
+        .qandaheading{
+            text-align:left; 
+            font-weight: bold;
+        }
+
+        .qandatext{
+            text-align:left; 
+        }
+
+        h1{
+            font-family: 'EB Garamond', serif;
+            /* font-size: 52px; */ 
+            margin: 0px;
+            font-size: 5.5vw;
+        }
+        h2{
+            font-family:'EB Garamond', serif;
+            font-size: 2.5vw;
+            text-align:left;
+            margin-left: 10%;
+        }
+        h3{
+            font-family:'Birthstone Bounce'
+        }
+        .bigText{
+            position:relative;
+            z-index: 3; 
+            text-align: center;
+            color: #414042;
+            top:-250px;
+        }
+        .detailBlock{
+            text-align: center;
+        }
+        nav {
+            top: 50%;
+            right: 0;
+            left: 0;
+            width: 319px;
+            display: table;
+            margin: 0 auto;
+            font-family: 'EB Garamond', serif;
+            font-size: 24px;
+        }
+
+        nav a {
+            position: relative;
+            width: 33.333%;
+            display: table-cell;
+            text-align: center;
+            color: #414042;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: 0.2s ease color;
+        }
+
+        nav a:before,
+        nav a:after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 0.2s ease transform;
+        }
+
+        nav a:before {
+            top: 0;
+            left: 10px;
+            width: 6px;
+            height: 6px;
+        }
+
+        nav a:after {
+            top: 5px;
+            left: 18px;
+            width: 4px;
+            height: 4px;
+        }
+
+        #indicator {
+            position: absolute;
+            left: 15%;
+            bottom: 0;
+            width: 30px;
+            height: 3px;
+            border-radius: 5px;
+            transition: 0.2s ease left;
+        }
+
+        nav a:hover {
+            color: #EEDCB6;
+        }
+
+        nav a:hover:before,
+        nav a:hover:after {
+            transform: scale(1);
+        }
+
+        /* Animation */
+
+        @keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+        }
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                transform: translate3d(0,40px,0)
+            }
+
+            to {
+                transform: translate3d(0,0,0);
+                opacity: 1
+            }
+        }
+
+        .animated {
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-fill-mode: both
+        }
+
+        .animatedFadeInUp {
+            opacity: 0
+        }
+
+        .fadeInUp {
+            opacity: 0;
+            animation-name: fadeInUp;
+            -webkit-animation-name: fadeInUp;
+        }
+
+        #page-wrap { width: 80%; margin: 60px auto; }
+#page-wrap > div, #actual-table { margin: 0 0 0px 0; width: 96%; }
+
+#actual-table { border-collapse: collapse; }
+    #actual-table td { 
+      width: 20%; 
+      padding: 10px; 
+      vertical-align: top;
+    }
+    #actual-table td:nth-child(even) { 
+      background: #eee;
+    }
+    #actual-table td:nth-child(odd) { 
+      background: #eee;
+    }
+    .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  width: 80%;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class = "topBar">
+        <img class = "topImage" src="resources/header.webp" alt="Pretty header">
+        <div class="hiddenDiv"></div>
+            <div class = "bigText">  
+                <div class="animated animatedFadeInUp fadeInUp"> 
+                    <div class='cuteHeading'> We're delighted to invite you to </div> 
+                    <h1>VIVIAN & ALAN'S </h1> 
+                    <div class='cuteHeading'> engagement party </div> 
+                    <br> <br>
+
+                    <nav>
+                    <a href="#info">INFO</a>
+                    <a href="#RSVP">RSVP</a>
+                    <a href="#FAQ">FAQ</a>
+                    <div id="indicator"></div>
+                    </nav>
+
+                </div>
+
+                <image class = "romanticPhoto" src="resources/engaged3.png"></image>
+                <div class="detailBlock" id="info">
+                    <h2> Information</h2>
+                </div>
+
+                <div id="page-wrap">
+                    <table id="actual-table">
+                        <tr>
+                            <td>
+                            <p><div class ="smallHeading">Time </div> <br> 7:00 pm </p>
+                            </td>
+                            <td>
+                            <p>  <div class ="smallHeading">Date </div> <br>  3rd September 2022  </p>
+                            </td>
+                            <td>
+                            <p><div class ="smallHeading">Location</div> <br> Sydney Aquarium, <br> 1-5 Wheat Rd, Sydney NSW 2000</p>
+                            </td>
+                            <td>
+                            <p><div class ="smallHeading">RSVP</div> <br> Kindly RSVP by the 31st of July <br></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="detailBlock" id="RSVP">
+                    <h2> RSVP</h2>
+
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVB7iBz8Iv9PY2gJoH4iwfqZqXncqdAY-r6hB9i-D4YsoO4g/viewform?embedded=true" width="640" height="1273" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+ 
+    
+                </div>
+
+                <div class="detailBlock" id="FAQ">
+                    <h2>FAQ</h2>
+                    <div id="page-wrap">
+
+                        <button class="accordion">What is the dresscode? </button>
+                        <div class="panel">
+                            <p>Cocktail.</p>
+                        </div>
+                        <button class="accordion">How do I get to the venue?</button>
+                        <div class="panel">
+                            <p><a href="https://www.google.com/maps/dir//SEA+LIFE+Sydney+Aquarium,+Wheat+Road,+Sydney+NSW/@-33.8699219,151.1667155,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x6b12ae38fb895f61:0x4e751ea315a8cc20!2m2!1d151.201735!2d-33.8699269!3e2?shorturl=1">Direct with Google Maps </a></p>
+                        </div>
+            
+                        <button class="accordion">Will there be a coatcheck? </button>
+                        <div class="panel">
+                            <p>Yes.</p>
+                        </div>
+
+                        <button class="accordion">My question isn't listed here? </button>
+                        <div class="panel">
+                            <p>There are several options. <br> Option 1: Fill in the question/comment section in your RSVP form. <br> Option 2: Reach out to Alan. <br> Option 3: If all else fails you can reach out to Vivian.</p>
+                        </div>
+
+                        <button class="accordion">Bonus Bits</button>
+                        <div class="panel">
+                            <p> 
+                                The last time we went to an Aquarium was in Kyoto in 2019. <br>
+                                During that trip we took photos of each other. Each of us aimed to capture the best <br>
+                                angle, with great lighting, while providing overall creative direction. <br>
+                                Recently we looked back at all the photos we took of each other and picked our favourite<br> 
+                                Here's Vivian's choice <br>
+                                <img src = 'alan.jpg' width=70%><br>
+                                and here's Alan's. <br>
+                                <img src = "vivian.gif" width=70%>  
+                            </p>
+                        </div>
+
+                    </div>
+        
+                </div> 
+            </div>      
+        </div>
+
+    <marquee>This was Alan's contribution to the code.</marquee>
+    
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script> 
+</body>
+</html>

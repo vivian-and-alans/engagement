@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no;user-scalable=0;"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -253,14 +253,6 @@
 
 
     </style>
-    <script>
-    webView.setInitialScale(0);//default,no zoom
-    webView.getSettings().setSupportZoom(true);
-    webView.getSettings().setBuiltInZoomControls(true);
-    webView.getSettings().setLoadWithOverviewMode(false);
-    webView.getSettings().setUseWideViewPort(false);
-    webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-</script>
 </head>
 <body>
     <div class = "topBar">
@@ -309,15 +301,16 @@
                 <div class="detailBlock" id="RSVP">
                     <h2> RSVP</h2>
                     <div id="page-wrap">
-                        <table id="actual-table">
-                            <tr>
-                                <td>
-                                <p> Note: Google forms is having issues with auto-zoom on Android devices. <br>
-                                    If you're having trouble try this <a href='https://forms.gle/WLcd3Y9x69EquZUh9' style="color:#EEDCB6">RSVP LINK</a> 
-                                    or visit this site from your computer.</p>
-                                </td>
-                            </tr>
-                        </table>
+                                   
+                        <iframe
+                        src="https://vivianbakiris.wispform.com/a09f0f93"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        style="height:600px; width:80%">
+                          Loading...
+                      </iframe>
+
                     </div>
 
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVB7iBz8Iv9PY2gJoH4iwfqZqXncqdAY-r6hB9i-D4YsoO4g/viewform?embedded=true" width="80%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
